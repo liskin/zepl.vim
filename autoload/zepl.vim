@@ -86,10 +86,6 @@ function! zepl#jump(...) abort
         execute mods . ' resize ' . size
     endif
 
-    if has('nvim')
-        startinsert
-    endif
-
     let &switchbuf = swb
 
     " 'keep' focus in previous buffer.
@@ -99,6 +95,8 @@ function! zepl#jump(...) abort
         else
             wincmd p
         endif
+    elseif has('nvim')
+        startinsert
     endif
 endfunction
 
