@@ -512,6 +512,15 @@ Examples:
 ==============================================================================
  4. CHANGE LOG                                                 *zepl-changelog*
 
+v1.6 [2023-08-06]~
+
+  * Added |'ZeplTerminalWinOpen'| auto-command that will run when the REPL
+    window first opens.
+  * Made `rlwrap` artefacting fix optional with the `rlwrap` key in |b:repl_config|
+    to resolve issues with other REPLs.
+  * Don't |startinsert| in Neovim terminal when |:keep| mod was used.
+  * Documentation updates.
+
 v1.5 [2022-03-24]~
 
   * Added |:keep| mod to |:Repl| to keep the current buffer focused.
